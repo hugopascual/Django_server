@@ -1,3 +1,3 @@
 #!/bin/bash
 
-python3 django_server/manage.py runserver
+python3 my_tennis_club/manage.py runserver
