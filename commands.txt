@@ -1,0 +1,32 @@
+# Start server
+python3 my_tennis_club/manage.py runserver
+
+# Create new
+# Execute this in the same folder as manage.py
+python3 manage.py startapp <app_name>
+
+# Migrations
+# When you make changes on a model, it is necessary to migrate these changes
+# so they could be included in the database.
+python3 my_tennis_club/manage.py makemigrations <app_name_with_changed_models>
+# If the database is not build or with the migrations changes use
+python3 my_tennis_club/manage.py migrate
+# If you want to see how the changes are made in the DB use
+python3 my_tennis_club/manage.py sqlmigrate <app_name> <migration_number>
+
+# Manipulate data
+# You can manipulate data via python sequences executed in terminal with
+python3 my_tennis_club/manage.py shell
+# Example of initial data
+from members.models import Member
+member = Member(firstname='Emil', lastname='Refsnes', phone= 5551234, joined_date= "2022-01-05")
+member1 = Member(firstname='Tobias', lastname='Refsnes')
+member2 = Member(firstname='Linus', lastname='Refsnes')
+member3 = Member(firstname='Lene', lastname='Refsnes')
+member4 = Member(firstname='Stale', lastname='Refsnes')
+member5 = Member(firstname='Jane', lastname='Doe')
+members_list = [member, member1, member2, member3, member4, member5]
+for x in members_list:
+    x.save()
+# To obtain all data
+Member.objects.all().values()
