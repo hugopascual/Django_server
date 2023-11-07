@@ -1,7 +1,11 @@
 # Start server
 python3 my_tennis_club/manage.py runserver
 
-# Create new
+# Create new project
+# Execute this in project folder
+django-admin startproject <project_name>
+
+# Create new app
 # Execute this in the same folder as manage.py
 python3 manage.py startapp <app_name>
 
