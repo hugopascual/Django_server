@@ -5,6 +5,9 @@ python3 my_tennis_club/manage.py runserver
 # Execute this in project folder
 django-admin startproject <project_name>
 
+# Create new admin user
+python3 my_tennis_club/manage.py createsuperuser
+
 # Create new app
 # Execute this in the same folder as manage.py
 python3 manage.py startapp <app_name>
